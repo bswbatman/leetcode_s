@@ -14,3 +14,10 @@ class Solution(object):
 
 
 #--7
+class Solution(object):
+    def reverse(self, x):
+        """
+        :type x: int
+        :rtype: int
+        """
+        pass
