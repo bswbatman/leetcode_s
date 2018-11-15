@@ -20,4 +20,19 @@ class Solution(object):
         :type x: int
         :rtype: int
         """
-        pass
+        # l = len(str(x))
+        k = 0
+        nu =0
+        p = 0
+        for i in str(x):
+            if i == '-':
+                p =1
+                continue
+            nu += int(i)*(10**k)
+            #print(nu)
+            k += 1
+        nu = int('-'*p + str(nu))
+        if -2147483648<nu<2147483648:
+            return nu
+        else:
+            return 0
