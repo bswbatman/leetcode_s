@@ -36,3 +36,32 @@ class Solution(object):
             return nu
         else:
             return 0
+
+#--9
+class Solution:
+    def isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+        if x <0:
+            return False
+        a = str(x)[::-1]
+        if int(a) == x:
+            return True
+        else:
+            return False
+
+#--fast
+class Solution:
+    def isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+
+        if x >= 0 and str(x) == str(x)[::-1]:
+            a = True
+        else:
+            a = False
+        return a
