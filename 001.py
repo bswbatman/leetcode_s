@@ -52,7 +52,7 @@ class Solution:
         else:
             return False
 
-#--fast
+#--fast9
 class Solution:
     def isPalindrome(self, x):
         """
@@ -65,3 +65,60 @@ class Solution:
         else:
             a = False
         return a
+
+#--13
+class Solution:
+    def romanToInt(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        dii = {
+            "I": 1,
+            "V": 5,
+            "X": 10,
+            "L": 50,
+            "C": 100,
+            "D": 500,
+            "M": 1000
+        }
+        summ = 0
+        summm = 0
+        listt = list(s)
+        lenn = len(listt)
+        k = 0
+        for i in range(lenn):
+            print('--------------------------------------')
+            print('i1', i)
+            i += k
+            # print(listt)
+
+            print('i2', i)
+            if i == lenn - 1:
+                print('gg')
+                summm += dii[listt[lenn - 1]]
+                break
+            if (i + 1) > lenn - 1:
+                break
+            if dii[listt[i]] <= dii[listt[i + 1]]:
+                summ += dii[listt[i + 1]] - dii[listt[i]]
+                summm += dii[listt[i + 1]] - dii[listt[i]]
+                print('make', listt[i])
+                # print('i',i)
+                k += 1
+                if summ == 0:
+                    summm += 1
+                    print('summm:', summm)
+                    k = 0
+                print('sum1', summm)
+                print('k:', k)
+                print('i:', i)
+            else:
+                k = 0
+                print('strart')
+                summm += dii[listt[i]]
+                print('make：', listt[i])
+                print('sum2', summm)
+                print('k:', k)
+                print('i:', i)
+        return summm
