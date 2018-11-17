@@ -128,6 +128,6 @@ class Solution:
                 print('sum2', summm)
                 print('k:', k)
                 print('i:', i)
-                j = i
+                j = i +1
 
         return summm
